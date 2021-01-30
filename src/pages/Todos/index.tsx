@@ -19,14 +19,20 @@ const Todos: React.FC = () => {
   return (
     <Container>
       <form onSubmit={handleAddTodo}>
-        <input value={task} onChange={(event) => setTask(event.target.value)} />
-        <button>create todo</button>
+        <input
+          value={task}
+          onChange={(event) => setTask(event.target.value)}
+          data-cy="input-todo"
+        />
+        <button data-cy="button-todo">create todo</button>
       </form>
-      <main>
+      <main data-cy="container-todos">
         {todos.map((todo) => (
           <div key={todo.id}>
             <p>{todo.task}</p>
-            <button onClick={() => removeTodo(todo.id)}>remove</button>
+            <button onClick={() => removeTodo(todo.id)} data-cy="button-remove">
+              remove
+            </button>
           </div>
         ))}
       </main>

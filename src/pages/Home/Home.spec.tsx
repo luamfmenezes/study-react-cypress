@@ -11,6 +11,7 @@ jest.mock("react-router-dom", () => {
 
 describe("Home page", () => {
   beforeEach(() => {});
+
   it("should be able to create a new todo", async () => {
     const { getByTestId, getByPlaceholderText, getByText } = render(<Home />);
 
