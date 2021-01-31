@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useTodo } from "../../hooks/todo";
 
-import { Container } from "./styles";
+import { Container, Header, Form, Content, Todo } from "./styles";
 
 const Todos: React.FC = () => {
   const { todos, addTodo, removeTodo } = useTodo();
@@ -18,24 +18,27 @@ const Todos: React.FC = () => {
 
   return (
     <Container>
-      <form onSubmit={handleAddTodo}>
+      <Header>
+        <h1>React todo List</h1>
+      </Header>
+      <Form onSubmit={handleAddTodo}>
         <input
           value={task}
           onChange={(event) => setTask(event.target.value)}
           data-cy="input-todo"
         />
         <button data-cy="button-todo">create todo</button>
-      </form>
-      <main data-cy="container-todos">
+      </Form>
+      <Content data-cy="container-todos">
         {todos.map((todo) => (
-          <div key={todo.id}>
+          <Todo key={todo.id}>
             <p>{todo.task}</p>
             <button onClick={() => removeTodo(todo.id)} data-cy="button-remove">
               remove
             </button>
-          </div>
+          </Todo>
         ))}
-      </main>
+      </Content>
     </Container>
   );
 };

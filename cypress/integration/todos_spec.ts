@@ -26,6 +26,7 @@ describe("My First test", () => {
 
     cy.get("[data-cy=container-todos]").children().should("have.length", 2);
   });
+
   it("should be able to remove a todo", () => {
     cy.visit("/todos");
 
