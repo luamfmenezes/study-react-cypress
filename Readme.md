@@ -5,11 +5,11 @@
 <img align="center" src="https://i.ibb.co/DVnybLq/1-UBB4-Oojxn-QFv-Q59lq8mp9-A.png" data-canonical-src="https://i.ibb.co/DVnybLq/1-UBB4-Oojxn-QFv-Q59lq8mp9-A.png" />
  </p>
 <p align="center">🚀 UI testing usign React/Typrescript and Cypress.</p>
-  
 
 ## Installing and running the application
 
 ### 🧬 Cloning and installing dependencies.
+
 ```bash
 # First clone the repository
 $ git clone https://github.com/luamfmenezes/study-react-cypress
@@ -18,7 +18,9 @@ $ git clone https://github.com/luamfmenezes/study-react-cypress
 $ yarn
 
 ```
+
 ### 🎲 Runing the fakeAPI (Server).
+
 ```bash
  # Run api fake:
  $ yarn apifake

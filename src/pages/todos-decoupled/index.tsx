@@ -3,8 +3,9 @@ import { useTodo } from "../../hooks/todo";
 
 import { Container, Header, Form, Content, Todo } from "./styles";
 
-const Todos: React.FC = () => {
+export const Todos: React.FC = () => {
   const { todos, addTodo, removeTodo } = useTodo();
+
   const [task, setTask] = useState("");
 
   const handleAddTodo = useCallback(
@@ -42,5 +43,3 @@ const Todos: React.FC = () => {
     </Container>
   );
 };
-
-export default Todos;

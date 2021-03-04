@@ -8,7 +8,7 @@ import React, {
 import { v4 } from "uuid";
 import api from "../services/api";
 
-interface ITodo {
+export interface ITodo {
   task: string;
   id: string;
 }
@@ -17,7 +17,7 @@ interface ICreateTodo {
   task: string;
 }
 
-interface ITodoContext {
+export interface ITodoContext {
   todos: ITodo[];
   loading: boolean;
   addTodo: (data: ICreateTodo) => void;

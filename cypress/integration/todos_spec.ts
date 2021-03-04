@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-describe("My First test", () => {
-  it("should be able add one new todo", () => {
+describe("Todo page", () => {
+  it("should be able to add a new todo", () => {
     cy.visit("/todos");
 
     cy.intercept(
